@@ -1,0 +1,12 @@
+#!/usr/bin/perl 
+print "Content-type:text/html\n\n";
+
+print "Killed";
+
+
+
+exec ('kill $(ps aux | grep \'[v]lc\' | awk \'{print $2}\')');
+
+exec ('kill $(ps aux | grep \'[r]aspivid\' | awk \'{print $2}\')');
+
+print "done";
