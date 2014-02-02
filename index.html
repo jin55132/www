@@ -2,21 +2,57 @@
 <head>
 	<!--<meta http-equip="Content-Type" content="text/html; charset=utf-8"/>-->
 <title>Welcome to nginx!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="button.css"/>
+<script type="text/javascript">
+	function jsAlert(val) {
+		if ( val == '1' ) {
+			alert("kwang");
+		} else {
+			alert("pretty");
+		}
+	}
+	
+	function go(val) {
+		var ff = document.getElementById("form1");
+		if ( val == '1' ) {
+			ff.action = "hello.cgi";
+		} else {
+			ff.action = "hello.cgi";
+		}
+		
+	}
+</script>
 </head>
-<body bgcolor="white" text="black">
-	<form action="vlc_feed.pl">
-		<input type="submit" value="Feed 시작">
+<body>
+<div style="width:20%; border:0px solid red; float:left;">
+<a href="javascript:jsAlert('1');">jin</a>
+<a href="javascript:jsAlert('2');">jiyoung</a>
+
+<form id="form1" action="" target="content" >
+	<input type="submit" value="Feed 시작" style="width:95%;" class="btn" onclick="javascript:go(1);">
+	<input type="submit" value="Feed 중지" style="width:80px;" class="btn"  onclick="javascript:go(2);">
+</form>
+
+	<form action="hello.cgi" target="content">
+		<input type="submit" value="Feed 시작" style="width:95%;">
 	</form>
 
 	<form action="vlc_kill.pl">
-		<input type="submit" value="Feed 중지">
+		<input type="submit" value="Feed 중지" style="width:80px;">
 	</form>
 
 	<form action="vlc_snap.pl">
-		<input type="submit" value="사진 찍기">
+		<input type="submit" value="사진 찍기" style="width:80px;">
 	</form>
-	<form action="temp.pl">
-		<input type="submit" value="온도">
+	<form action="temp.pl" target="content">
+		<input type="submit" value="온도" style="width:80px;">
 	</form>
+</div>
+<div style="width:*; border:0px solid blue;">
+<iframe name="content" id="content" style="width:*; border:0px;">abcd</iframe>
+</div>
+
+
 </body>
 </html>
