@@ -6,6 +6,8 @@ use Proc::PID::File;
   if (@ARGV && $ARGV[0] eq "stop")
   {
     my $pid = Proc::PID::File->running(name => "blacklist", dir=> "/run/shm");
+	print "$pid";
+
     unless ($pid)
      { die "Not already running!" }
     kill(2,$pid);  # you may need a different signal for your system

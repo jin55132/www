@@ -4,6 +4,7 @@
 <title>Welcome to nginx!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 <link rel="stylesheet" type="text/css" href="button.css"/>
+
 <script type="text/javascript">
 	function jsAlert(val) {
 		if ( val == '1' ) {
@@ -20,7 +21,6 @@
 		} else {
 			ff.action = "hello.cgi";
 		}
-		
 	}
 </script>
 </head>
@@ -42,7 +42,7 @@
 		<input type="submit" value="Feed 중지" style="width:80px;">
 	</form>
 
-	<form action="vlc_snap.pl">
+	<form action="vlc_snap.pl" target="content">
 		<input type="submit" value="사진 찍기" style="width:80px;">
 	</form>
 	<form action="temp.pl" target="content">
